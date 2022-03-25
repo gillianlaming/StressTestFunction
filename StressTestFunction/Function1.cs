@@ -23,8 +23,6 @@ namespace StressTestFunction
 			log.LogInformation($"Path to write files is {folderPath}");
 			log.LogInformation($"application path is {applicationFilePath}");
 
-			DateTime now = DateTime.UtcNow;
-			log.LogInformation($"last update time is 10:11");
 			Process.Start(applicationFilePath, $"writeperftest -p {folderPath} -c 3000 -cs 1000 -t 5 -cc 1000 -s 1 -v 1 -dc 1 -wt 1 -fc 1");
 			Process.Start(applicationFilePath, $"testfileopenclose {pathToReadFile} 100000");
 		}
