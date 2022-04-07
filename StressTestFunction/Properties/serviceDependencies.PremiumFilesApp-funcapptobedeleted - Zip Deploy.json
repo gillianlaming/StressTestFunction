@@ -1,16 +1,10 @@
 {
   "dependencies": {
-    "appInsights1": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/microsoft.insights/components/StressTestFunctionAppInsights",
-      "type": "appInsights.azure",
-      "connectionId": "APPINSIGHTS_CONNECTIONSTRING",
-      "secretStore": "AzureAppSettings"
-    },
     "storage1": {
+      "secretStore": "AzureAppSettings",
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/glamingstorage",
       "type": "storage.azure",
-      "connectionId": "AzureWebJobsStorage",
-      "secretStore": "AzureAppSettings"
+      "connectionId": "AzureWebJobsStorage"
     }
   }
 }
